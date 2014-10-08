@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="orientBlueprintConnector" class="com.tinkerpop.blueprints.impls.orient.OrientGraph"
+		destroy-method="shutdown">
+
+		<constructor-arg type="String">
+			<value>remote:localhost/database/EMT_DB</value>
+			<!-- <value>local:E:/Workspace/OrientDB/orientdb-community-1.7.8/databases/EMT_DB</value> -->
+		</constructor-arg>
+		<constructor-arg type="String">
+			<value>admin</value>
+		</constructor-arg>
+		<constructor-arg type="String">
+			<value>admin</value>
+		</constructor-arg>
+	</bean>
+
+</beans>

@@ -1,0 +1,56 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestDataLayer">
+    <test name="Files">
+        <groups>
+            <run>
+                <include name="CSV"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="org.cropcircles.rest.test.datalayer.TestFileSource"/>
+        </classes>
+    </test>
+
+</suite>
+
+    <!--<test name="Graphs">
+        <groups>
+            <run>
+                <include name="Test-Graphs"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.algorithms.graph.test.TestGraph"/>
+        </classes>
+    </test>
+
+    <test name="Trees">
+        <groups>
+            <run>
+                <exclude name="Two-Three Tree"/>
+                <exclude name="BST"/>
+                <exclude name="AVL Tree"/>
+                <exclude name="Red Black Tree"/>
+                <exclude name="Random BST"/>
+                <exclude name="Deletion"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.algorithms.trees.test.TestTree"/>
+        </classes>
+    </test>
+
+    <test name="Sorting">
+        <groups>
+            <run>
+                <exclude name="Integer-Sorting"/>
+                <exclude name="Character-Sorting"/>
+                <exclude name="Primitive Sort"/>
+                <exclude name="Fast Sort"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.algorithms.sorting.test.TestSorting"/>
+        </classes>
+    </test>-->

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/security
+            http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+	<!-- Security Context -->
+
+	<http>
+		<intercept-url pattern="/**" access="ROLE_USER"
+			requires-channel='https' />
+        <http-basic />
+			
+		<!-- <security:session-management invalid-session-url="/invalidSession" /> -->
+		<!-- <security:logout delete-cookies="JSESSIONID" /> -->
+	</http>
+
+	<authentication-manager>
+		<authentication-provider>
+			<user-service id="userService">
+				<user name="sinsi02" password="123456"
+					authorities="ROLE_USER" />
+			</user-service>
+		</authentication-provider>
+    </authentication-manager>
+	<!-- <bean class="com.emt.web.controller.EmployeeController" /> -->
+
+</beans:beans>
